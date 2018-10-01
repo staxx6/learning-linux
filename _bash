@@ -1,0 +1,15 @@
+#done some bash changes? Start bash new
+> exec bash
+
+> STRG + L  clear screen
+> STRG + K  clear from cursor to end
+
+# Navigate
+> CTRL + A  Cursor to start ('A'nfang)
+> CTRL + E  Cursor to 'e'nd
+> ALT + B   Word 'b'ack
+> ALT + F   Word 'f'orward
+> STRG + R  Search last used cmds
+
+#Insert
+> ALT + .   Insert last param (cp name1 name2, now delete last copy rm 'ALT+.')

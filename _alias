@@ -1,0 +1,9 @@
+> alias NAME=CMD
+> \CMD  #ignore aias
+> unalias NAME
+
+# exp
+> alias cdt='cd ~/linux/muchfies'
+
+# Forever
+write in ~/.bashrc

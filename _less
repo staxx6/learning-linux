@@ -1,0 +1,13 @@
+#Show large files scrollable
+> less FILE
+
+#Show cmd output scrollable
+> CMD | less
+> ls -l | less
+> ps ax | less
+
+#Navigate
+CTRL + F = Site forward
+CTRL + B = Site backward
+G = Go to last line
+g = Go to first line

@@ -1,0 +1,21 @@
+> echo $PATH
+> PATH=$PATH':/home/staxx6/bin' adding
+
+# Calc
+> a=$[2+3]
+
+# CMD output
+b=$(CMD)
+
+# Variants
+a=3             local - short for let
+declare a=3     local - like let
+declare -x a=3  global
+export          show all global vars
+export b        makes b to a global
+export b=3      global
+let a=3         local
+local a=3       local
+printenv        like export
+set             show all global and local vars
+unset a         removes var a

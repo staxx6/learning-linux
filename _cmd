@@ -1,0 +1,13 @@
+> CMD1; CMD2    Runs the cmds in sequence
+> CMD1 && CMD2  Runs cmd2 if cmd1 was a success
+> CMD1 || CMD2  Runs cmd2 if cmd1 had a failure
+> CMD &         Runs cmd in background
+> CMD1 & CMD2   Runs cmd1 in background and cmd2 in foreground
+(CMD1 ; CMD2 )  Runs both cmd in same shell
+
+# Started a cmd not with '&' ?
+> STRG + Z      Interrupt program
+> bg            Continue program in background
+
+# Stuff
+> (CMD1; CMD2) > FILE   write both outputs in a files

@@ -1,0 +1,14 @@
+# Write output from a CMD to a file
+> ls -l -a > DATA # rewrite file
+> ls -l -a >> DATA # write at end of file
+
+# Read from file and send to CMD
+> ls -l -a < 
+DATA (exp in DATA ~) # not working as expected
+
+# Send output from CMD to another CMD
+> CMD1 | CMD2
+> ls -l -a | less
+
+# Double the output
+ls -l | tee fileOut1 | sort +4 > fileOut2
