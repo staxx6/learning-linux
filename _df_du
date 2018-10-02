@@ -1,0 +1,6 @@
+> df            Disk Free
+> df -h         with readable sizes (manjaro has an alias)
+> dh -x tmpf    don't show tmp stuff
+
+> du -h             df - shows ALL folder from current dir
+> du -h | tail -1   show only size

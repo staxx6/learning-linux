@@ -1,0 +1,22 @@
+?       single char
+*       all even zero
+[abc]   something from given char
+[a-f]   " with range
+[!abc]  not with the char
+[^abc]  "
+
+# examples
+*lel*       somelel.here
+[a-f]*      all files that start with a-f
+*[_.-]*     all files with _ . and/or -
+[!a-z]      all files which start with uppercase or symbol
+*.[hc]      all files with .c or .h ending
+
+echo */.    list only dirs (recursive view . is own dir, files don't have this)
+
+# shell changes the wildcards
+> ls -R *.dat   -R dosn't work, shell gives a list only from current dir
+
+## the . .. files
+.*      baaad
+.[!.]*  goood ([!.] not . but must be 1 more char, so "." is excluded too)

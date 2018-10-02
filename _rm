@@ -1,0 +1,1 @@
+> rm -rf DEST     without question and recursive (no need for rmdir)

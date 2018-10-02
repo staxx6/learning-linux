@@ -1,2 +1,8 @@
 #!/bin/bash
 # ^- Shebang defines which interpreter will be using
+
+# Permission
+chmod a+x SCRIPT
+
+# To use from every where
+mv SCRIPT /usr/local/bin
