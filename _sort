@@ -1,0 +1,7 @@
+> sort FILE                     ASCII Numbers exp. -> 16, 17, 2, 3, ...
+> sort -n FILE                  numeric sort -> 2, 3, 16, 17 ...
+> sort -k 3n FILE               the nth field will be sort "afs asd 3", "afs asd 4"
+> sort -k 3n -k 2M -1n FILES    2M for month sort, needs correct $LANG
+
+> sort -t: -k 2nr FILE          cut char by ":"; -r for reverse?
+> sort -k 2hr FILE              human readable (G=1024M ..)               

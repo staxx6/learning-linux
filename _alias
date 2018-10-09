@@ -1,5 +1,5 @@
 > alias NAME=CMD
-> \CMD  #ignore aias
+> \CMD  #ignore alias
 > unalias NAME
 
 # exp

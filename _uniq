@@ -1,0 +1,3 @@
+> uniq FILE         ignores following dups (A A B A) Only second A will be ignored
+> uniq FILE -i      upper lower case ignored
+> uniq FILE -c      count

@@ -1,0 +1,3 @@
+> cut -c 1,3-8,10- FILE             cuts out 1, 3-8 and @10 all CHARS
+> cut -f and cut -b                 f=fields, b=bytes
+> cut -complement 1,3-8,10- FILE    

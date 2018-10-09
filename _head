@@ -1,0 +1,7 @@
+> head -n 2 FILE        print first 2 lines
+> head -2 FILE          short form
+> head -n -2            from bottom
+> head -c 10 FILE       read 10 CHARS nit lines
+
+> head FILE FILE2       read more files; with extra title and space!
+> head -q FILE FILE2    without extra stuff
