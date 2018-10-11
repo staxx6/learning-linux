@@ -1,0 +1,32 @@
+> egrep 'EXP' FILE      Gives all lines with EXP
+> egrep -i ...          ignores Uppercase
+> egrep -v ...          DON'T show lines with 'EXP'
+> egrep -n ...          shows line numbers
+> egrep -c ...          shows only matching line number
+
+> egrep -q ...          no output, only error prompts
+
+> egrep ... FILE1 FILE2 shows FILE1:MATCHES (new line) FILE2:MATCHES
+> egrep ... -h "        dont show 'FILE1:' titles
+> egrep ... -H FILE     shows filename even by only one file
+> egrep ... -l FILE1 2  shows ONLY file names
+
+> egrep '^st ' FILE     shows only lines that starts with st and space ' '
+
+
+### Cross
+-> cat
+> grep -v '^#' configfile | cat -s > aFile      
+                        ignore #-Comments and write no mulitply blank lines
+
+-> find
+find -name '*.tex' -type f -exec grep -q emacs {} \; -print
+                              |                   |     |> without no output (it's gone to grep)
+                              |                   |> terminate - line separated output by find  + for in ine line
+                              |> execute with found files, represented with {}
+                              
+                                        finds *.tex files WITH 'emacs' and print on screen
+
+find -name '*' -maxdepth 1 -size -10k -exec grep -q case.*in {} \; -print > file
+            |                       |> smaller as 10KiB
+            |> all files in from here

@@ -10,4 +10,6 @@
 > bg            Continue program in background
 
 # Stuff
-> (CMD1; CMD2) > FILE   write both outputs in a files
+> (CMD1; CMD2) > FILE       write both outputs in a files
+> rm $(find . -name '*~')   removes all backup files - CMD substitution/ replace
+                            - cmd could be too long by many matches

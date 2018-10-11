@@ -1,0 +1,2 @@
+### Cross
+> grep -v '^#' configfile | cat -s > aFile      ignore #-Comments and write no mulitply blank lines

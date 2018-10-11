@@ -1,0 +1,25 @@
+> find                                  looks for all files in current path
+> find -name '.e*'                      looks for files with starting ".e"
+> find PATHNAME -path '*/bla/*.pdf'     looks for files (end with .pdf and is in /bla/ dir) in PATHNAME
+> find /etc -type d                     shows only normal files
+> find /home -group users -mtime -5     files owned by users and touched last 5 days
+> find /home -group users -mtime +5     files owned by users and touched OVER 5 days
+                                        - without +/- files touched exactly before 5 days
+> find -ctime                           looks the inode change (chmod changes this)
+
+### Cross
+-> rm
+rm $(find . -name '*~')                 removes all backup files - CMD substitution/ replace
+                                        - cmd could be too long by many matches
+
+-> grep
+find -name '*.tex' -type f -exec grep -q emacs {} \; -print
+                              |                   |     |> without no output (it's gone to grep)
+                              |                   |> terminate - line separated output by find  + for in ine line
+                              |> execute with found files, represented with {}
+
+                                        finds *.tex files WITH 'emacs' and print on screen
+
+find -name '*' -maxdepth 1 -size -10k -exec grep -q case.*in {} \; -print > file
+            |                       |> smaller as 10KiB
+            |> all files in from here

@@ -1,0 +1,13 @@
+Start a file with what?
+
+/etc/mime.types     global configs for data types
+/etc/mailcap        global config for programs
+.mime.types         local config for data types
+.mailcap            local config for programs
+
+types       type    file name      
+mailcap     type; open with (semicolon is separator)
+
+## Files without *.type
+The program 'file' tries to read the file type. Some
+distros in /etc/magic ~ .magic changeable. 

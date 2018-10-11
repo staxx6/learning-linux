@@ -1,0 +1,17 @@
+> ls -l     long listing
+
+drwxr-xr-x 2 staxx6 staxx6 4096 2. Okt 17:06 NAME
+T||||||||| H owner  group  size date   time  name
+ usr||||||
+    grp|||
+       oth
+
+# Type:
+ -          normal
+ d          directory
+ b or c     device-data (block or char)
+ l          symbolic link
+ s          socket
+ p          pipe
+
+ #### users who have rights (wx) for the dir can remove files which aren't theirs! ####
