@@ -1,0 +1,7 @@
+> mount /dev/sdXX /mnt/
+
+### Cross
+# Target is busy
+-> fuse -m /dev/sdXX    shows pid
+-> ps aux               shows runnings processes
+
