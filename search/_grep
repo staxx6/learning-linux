@@ -3,6 +3,7 @@
 > egrep -v ...          DON'T show lines with 'EXP'
 > egrep -n ...          shows line numbers
 > egrep -c ...          shows only matching line number
+> egrep -o ...          shows only matching part (separated lines)
 
 > egrep -q ...          no output, only error prompts
 
@@ -12,6 +13,9 @@
 > egrep ... -l FILE1 2  shows ONLY file names
 
 > egrep '^st ' FILE     shows only lines that starts with st and space ' '
+> egrep 'endthis$' FILE     shows only lines that ends with endthis
+
+-> wildcards
 
 
 ### Cross

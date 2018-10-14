@@ -1,3 +1,4 @@
-> cut -c 1,3-8,10- FILE             cuts out 1, 3-8 and @10 all CHARS
+> cut -c 1,3-8,10- FILE             cuts out 1, 3-8 and on 10 ongoing all CHARS
 > cut -f and cut -b                 f=fields, b=bytes
 > cut -complement 1,3-8,10- FILE    
+> cut -d : -f 5                     use delimiter ":" and cut out 5 field
