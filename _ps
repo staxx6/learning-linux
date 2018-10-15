@@ -1,0 +1,3 @@
+> ps        shows current running programs, but only from text
+            if process in [] it's a kernel process 
+> ps ax     shows every process

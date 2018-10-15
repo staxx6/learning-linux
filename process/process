@@ -1,0 +1,2 @@
+Some processes save under /var/run a PID-file
+This file contains the PID. 

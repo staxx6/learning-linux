@@ -1,0 +1,4 @@
+> kill PID      gracefully shut program down
+> kill -9 PID   WITH FIRE
+
+> killall NAME

@@ -1,0 +1,5 @@
+!SEE permissions
+
+> groups    shows which groups the current user belongs
+
+> newgrp NAME   switch the main group, you create files now with this group

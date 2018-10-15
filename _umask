@@ -1,0 +1,7 @@
+!SEE permissions
+
+> umask     show current umask
+
+Example:
+Umask 022,  new files 666 - 022 = 644 (rw-r--r--)
+            new dirs  777 - 022 = 755 (rwxr-xr-x)

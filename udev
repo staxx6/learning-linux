@@ -1,0 +1,2 @@
+udev manage the connected devices. It started by the init process. 
+Config file /etc/udev

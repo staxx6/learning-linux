@@ -1,0 +1,68 @@
+### Short FHS
+
+/       Root
+
+/bin        Elementry Linux-CMDs for system controll 
+            every user can use it. More in /usr/bin but
+            most distros link to /bin, so no more diff.
+
+/boot       Files to boot the system (mostly GRUB). In
+            most distros have the kernel here
+
+/dev        All device files. Dynamically from udev-System
+            On most distros saved on RAM-Disk -> removed
+            after restart
+
+/etc        Config files for the whole system
+
+/home       Home dirs
+
+/lib[64]    Shared libraries or symbolic links to them.
+            ./modules kernel modules
+            On current distros link to /usr/lib
+
+/lost+found Only in ext-filesystem. Unkown sectores after
+            fsck
+
+/media      Contains subdirectorys like cdrom or usb
+            but now under /run/media/<user>/<devicename>
+
+/opt        Additional packets. In most distors not used.
+            Manjaro use it with > yay (AUR packages)
+
+/proc       Subdirectorys with running processes. No real datas!
+            Just representing linux internal management of processes
+
+/root       Contains root files
+
+/run        Contains on most distros process ID and some more
+            infos about sys services. In the past saved in /var/run
+            ./lock - locking files -> in old /var/lock
+            On some distros completely or part of it is on RAM-Disk
+
+/sbin       Linux-CMDs which are only can be used by admins
+            On most distros now link to /usr/sbin
+
+/share      Sometimes architecture independent files. Normal place
+            is /usr/share
+
+/srv        On some Distros server files
+
+/sys        Contains the sysfs data system
+
+/tmp        Contains tmp files but often in /var/tmp too
+
+/usr        Contains all user programs, X-System, source code of Linux,
+            ... Only changed by packet installation and updates.
+            ./bin       executable programs
+            ./games     games; somtimes link to /usr/share/games
+            ./include   C-Include-Files
+            ./lib[64]   div. libs, a lot of subdirectorys for C-Compiler
+            ./local     Programs and files which aren't from the Distro
+            ./sbin      For root only startable programs
+            ./share     Architecture independent files (example docu)
+            ./src       Linux source code and other programs
+
+/var        Contains changeable files. 
+
+

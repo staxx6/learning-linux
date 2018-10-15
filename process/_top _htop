@@ -1,0 +1,9 @@
+> top       shows a sorted (cpu usg) list with running process
+
+R: running
+S: sleeping
+T: stopped
+
+top can use interactive cmd like K, kill or r, renice (change priority)
+
+> htop      alternative

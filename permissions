@@ -52,6 +52,10 @@ p          pipe
 > chmod 755 /dir1               (not sure why) all user allowed to read/ use
 > chmod 2770 /dir1/dir2         if someone creates a dir/file the permissions are the same
 
+> groups        shows which groups the current user belongs
+> newgrp NAME   switch the main group, you create files now with this group
+                ignored if setgid is on folder
+
 ### Dirs
 cmd                 file-perm   dir-perm
 cd ...              -           x
@@ -79,3 +83,5 @@ Setgid =            similar to suid but prog is started with group permissions
                     if someone creates a dir/file the permissions are the same from parent dir
                     rwt or rwT: t if x is set too otherwise T (third col) (big T probaly means wrong sticky use)
                     > chmod +t FILE
+
+### Umask

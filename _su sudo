@@ -1,0 +1,4 @@
+> su NAME       login as other user (cmd+d or exit)
+> su -l root    -l to read login start files (working PATH, vars, etc)
+
+

@@ -1,0 +1,7 @@
+> nice -n 10 ./my-backup-script     start the program with lower priority
+
+19 (lowest) to -20 (highest) - 0 default
+
+> renice -n 10 PID  change for a running program 
+
+> ionice -c 3 cat /dev/vg1/snap | lzop -c > /backup/img.lzo start with low prio (3=idle?)
