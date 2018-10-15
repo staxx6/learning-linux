@@ -17,3 +17,7 @@ ls -l | tee fileOut1 | sort +4 > fileOut2
 
 # (mypasswd not used in manjaro - /etc/shadow)  
 cut -d : -f 7 mypasswd | sort | uniq -c
+
+## Example for error
+> egrep-v '^#' file | sort file     sort looks ONLY in stdin
+> egrep-v '^#' file | sort          better
