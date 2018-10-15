@@ -7,11 +7,75 @@ T||||||||| H owner  group  size date   time  name
        oth
 
 # Type:
- -          normal
- d          directory
- b or c     device-data (block or char)
- l          symbolic link
- s          socket
- p          pipe
+-          normal
+d          directory
+b or c     device-data (block or char)
+l          symbolic link
+s          socket
+p          pipe
 
- #### users who have rights (wx) for the dir can remove files which aren't theirs! ####
+
+### Octal
+4000 = s = setiud
+2000 = s = setgid
+1000 = t = sticky
+------------------
+400 = r = read
+200 = w = write     u - User 
+100 = x = execute
+------------------
+40 = r = read
+20 = w = write      g - Group
+10 = x = execute
+------------------
+4 = r = read
+2 = w = write       o - Other 
+1 = x = execute
+
+# examples
+660: rw-rw----
+777: rwxrwxrwx
+
+> chmod 640 FILE    # rw-r-----
+
+#### users who have rights (wx) for the dir can remove files which aren't theirs! ####
+
+# set permissions
+> chmod o+r FILE    give 'other'read permissions
+> chmod +t FILE     set sticky bit setgid
+
+### Group
+> addgroup NAME                 create group
+> usermod -a -G GROUP USER      add user to a group
+> chgrp grpNAME FILE            give the file a user group
+
+> chmod 755 /dir1               (not sure why) all user allowed to read/ use
+> chmod 2770 /dir1/dir2         if someone creates a dir/file the permissions are the same
+
+### Dirs
+cmd                 file-perm   dir-perm
+cd ...              -           x
+ls                  -           r
+ls -l               -           rx
+touch               -           wx
+less                r           x
+cat >> exists       w           x
+rm                  -           wx
+./prog              x           x
+./script            rx          x
+
+### Special bits
+
+Setuid = suid       Programs start with extended permissions (normal program starts from user)
+                    passwd need root to access /etc/shadow
+                    rws or rwS: s if x is set too otherwise S (first col) (big S probaly means wrong sticky use)
+                    ! normaly ignored for scripts - security danger
+
+Setgid =            similar to suid but prog is started with group permissions
+                    rws or rwS: s if x is set too otherwise S (second col) (big S probaly means wrong sticky use)
+
+                    Dirs complete other meaning: 
+                    Not in all distros same!
+                    if someone creates a dir/file the permissions are the same from parent dir
+                    rwt or rwT: t if x is set too otherwise T (third col) (big T probaly means wrong sticky use)
+                    > chmod +t FILE
