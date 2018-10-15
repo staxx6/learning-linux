@@ -56,3 +56,24 @@ echo "$0" #script name
 #echo "$2" #second param ...
 #echo "${12}" #for more than 9 params
 echo "$#" #number of params
+
+### Exit code
+cat /dev/null ; echo $? #returns 0
+cat /etc/shadow ; echo $? #returns 1 "permission denied"
+
+# Pipes and $? last cmd is saved
+true | false
+echo "$?" #1
+
+# negate
+!false
+echo "$?" #0
+
+# substition
+true $(false)
+echo "$?" # 0
+
+## Problem
+false # does nothing just returning unsuccessfuly exit
+echo "$?" # 1
+echo "$?" # 0 - previous echo was successfuly - save in var!
