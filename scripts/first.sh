@@ -42,3 +42,17 @@ echo '$d'
 echo "----------"
 
 set -o nounset #same with set -u (-o = option OPTION)
+echo "$var1"
+#echo "$var2" program stops unbound var!
+echo "$var3"
+
+unset var3
+#echo "$var3" program stops unbound var!
+
+### special vars (because of nounset cmts)
+
+echo "$0" #script name
+#echo "$1" #first param
+#echo "$2" #second param ...
+#echo "${12}" #for more than 9 params
+echo "$#" #number of params

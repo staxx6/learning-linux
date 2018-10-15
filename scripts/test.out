@@ -1,7 +1,7 @@
 Hello, world!
 var1:var2:var3:Wort::Hello world
 :Wortgefecht
--rw-r--r-- 1 staxx6 staxx6 60 15. Okt 16:52 test.out
+-rw-r--r-- 1 staxx6 staxx6 60 15. Okt 17:12 test.out
 value ls
 --$ --
 test a
@@ -19,3 +19,8 @@ $b
 $c
 $d
 ----------
+Wort
+Hello world
+./first.sh
+hi
+1
