@@ -1,0 +1,6 @@
+!Distro: Manjaro it's cronie
+
+Automatic start of processes
+global config in /etc/crontab
+
+### No "." in file names if in xy-ly folder!

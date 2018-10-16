@@ -1,0 +1,22 @@
+Background processes for system managing  (Win Services).
+Started by systemd (init-system on most distros)
+
+### Cross
+-> systemd
+
+#systemctl=systemCONTROL?
+> systemctl start name      one time start
+> systemctl stop name       
+
+> systemctl status name
+> systemctl restart name
+> systemctl reload name     reload config
+
+> systemctl enable name     start every time in future
+> systemctl disable name    start 
+
+# Kernel-Threads
+
+Not rly processes 
+> ps axu    shows them in [NAME] \number shows which 
+            CPU

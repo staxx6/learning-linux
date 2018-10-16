@@ -1,0 +1,8 @@
+> ip addr   shows all known network interfaces
+            typical interfaces:
+                - ethN or enpNsM    Ethernet (Bus-Nr.)
+                - wlanN             Wlan
+                - pppN              Over UMTS, ADSL or VPN
+                - lo                loopback
+
+> ip route  show routing (exp. gateway)

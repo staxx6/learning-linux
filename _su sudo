@@ -2,3 +2,11 @@
 > su -l root    -l to read login start files (working PATH, vars, etc)
 
 
+### Sudo
+
+Start program with other user (normaly root) pw is users not root!
+log of all activities: /var/log/messages (not manjaro?)
+
+change "login time" in /etc/sudoers
+
+> sudo -s   change to root modus (exit or ctrl+d)^

@@ -1,0 +1,28 @@
+(Init-System)
+
+## Automatic start and sutdown of processes
+
+the timing starts are defined in timer-unit-files  .timer
+> systemctl list-timer  shows active timers
+
+/usr/lib/systemd/system
+
+*.timer and *.service files
+
+### Cross
+-> daemons
+
+> systemctl reenable --now name.timer
+
+This stuff needs a start like this:
+
+#systemctl=systemCONTROL?
+> systemctl start name      one time start
+> systemctl stop name       
+
+> systemctl status name
+> systemctl restart name
+> systemctl reload name     reload config
+
+> systemctl enable name     start every time in future
+> systemctl disable name    start 
