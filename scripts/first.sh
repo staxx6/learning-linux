@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#set -o nounset #same with set -u (-o = option OPTION)
+#set -o errexit #if program has an error stop script
+
 echo "Hello, world!"
 
 var1=Wort
@@ -42,6 +45,7 @@ echo '$d'
 echo "----------"
 
 set -o nounset #same with set -u (-o = option OPTION)
+set -o errexit #if program has an error stop script
 echo "$var1"
 #echo "$var2" program stops unbound var!
 echo "$var3"
