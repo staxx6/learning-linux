@@ -6,3 +6,5 @@
                 - lo                loopback
 
 > ip route  show routing (exp. gateway)
+
+> ip neigh  show known Hosts (ARP)

@@ -1,0 +1,14 @@
+> ssh IP
+> ssh IP -l otheruser   login with other user
+
+ssh is saving known hosts in ~/.ssh/known_hosts
+configs /etc/ssh/ssh_config and /etc/ssh/sshd_config
+
+> ssh IP CMD ARGUMENTS
+
+> ssh -N -L localPORT:localhost:remotePORT username@IP     
+    ssh tunnel. A save way to transport IP (with different ports) packets even if
+    a firewall is between. -N for no shell
+
+### Cross
+!SEE scp    copy files per ssh

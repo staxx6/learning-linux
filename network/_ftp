@@ -1,0 +1,8 @@
+> ftp user@ftpservername        (local dir is in use!) After connection cd, pwd, ls works
+>> get FILE                     download file
+>> put FILE                     send file
+>> bye
+
+>> binary                       switch to binary (text is bad mkay, tries to convert stuff)
+
+!SEE sftp

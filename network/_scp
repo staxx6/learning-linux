@@ -1,0 +1,5 @@
+> scp [[user1@]host1:]filename1 [[user2@]host2:][filename2]     send file from 1 to 2
+
+> scp FILE pi@192.168.0.122:~/FILE2     from desktop host to pi
+
+if ipv6 [ADDRS]
