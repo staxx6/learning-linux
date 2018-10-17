@@ -1,0 +1,14 @@
+### wget
+
+It's using FTP, HTTP and HTTPS
+
+> wget ftp://somewhere.de/file.txt
+
+> wget -c FILE                      if abort redownload
+> wget -t 20 --retry-connrefused    20x retries even if connection is refused
+
+> wget -p -k -E -h url.html         -p loads css/imgs -k change links to local
+                                    -E scripts (php etc) adds *.html
+                                    -H followes extern links
+
+> wget -r -l 4 -p -E -k html        -r recursive -l limit depth
