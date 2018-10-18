@@ -12,3 +12,13 @@ It's using FTP, HTTP and HTTPS
                                     -H followes extern links
 
 > wget -r -l 4 -p -E -k html        -r recursive -l limit depth
+
+### curl
+
+- curl is like cat, more pipe stuff, where wget is like cp
+- more protocols
+- but wget can download recursively
+
+> curl -T FILE -u username:password ftp://backupserver/dir  -T sends the file/ upload
+
+> tar czf - verz/ | curl -T - -u usern:pw ftp...            "-" from pipe
