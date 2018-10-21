@@ -1,0 +1,5 @@
+> type cmd      shows where the cmd is from
+                hashed means the shell wont search
+                anymore for it (saved with hash)
+
+> type -a type  shoes all Belegungen for a CMD

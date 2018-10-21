@@ -43,3 +43,27 @@ echo ${file%.*}
 
 # removes . and file extension
 echo ${file%.*}
+
+# removes file name
+echo ${file%/*}
+
+name="Max Arnold Mustermann"
+# removes everything after first space
+echo ${name%% *}
+
+HOME=/home/nutzer
+DATA=/data/nutzer
+file=/home/nutzer/sub/file.gz
+
+# change sample HOME with DATA for var file
+echo ${file/$HOME/$DATA}
+
+s1="gross"
+s2="KLEIN"
+
+echo ${s1^} ${s1^^} ${s2,} ${s2,,}
+
+### More under https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html#Shell-Parameter-Expansion
+
+
+

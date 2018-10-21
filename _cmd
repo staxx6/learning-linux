@@ -13,3 +13,12 @@
 > (CMD1; CMD2) > FILE       write both outputs in a files
 > rm $(find . -name '*~')   removes all backup files - CMD substitution/ replace
                             - cmd could be too long by many matches
+
+### Where the shell looks for CMDs
+1. Alias
+2. Key word? (if, while ...)
+3. Functions 
+4. Shell intern function
+5. PATH
+
+!see type
