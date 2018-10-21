@@ -1,1 +1,6 @@
 > ping -c 2     2 times
+> ping -b       broadcast
+> ping -c       count
+> ping -q       quiet; only summary
+> ping -n       only numeric
+> ping -w       timeout in seconds

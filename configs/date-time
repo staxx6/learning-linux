@@ -1,0 +1,23 @@
+GMT = UTC
+
+Saved files are saved with UTC time,
+ls -l show converted time.
+
+System reads the CMOS-Clock (or RTC Real Time Clock) with hwclock
+Current distros uses systemd-timedated
+
+> timedatectl set-local-rtc 0   hardware clock uses GMT
+                                change third line /etc/adjtime UTC or LOCAL
+> timedatectl set-local-rtc 1   hardware clock uses local time
+                                change third line /etc/adjtime UTC or LOCAL
+
+Programs uses the glibc-lib to get the timezone. The lib
+looks at /etc/localtime which is a link to the /usr/share/zoneinfo - it's
+a folder!?! -> see set-timezone
+
+> timedatectl status                        show current config
+> timedatectl list-timezones | grep Europe
+> timedatectl set-timezone Europe/Vienna    change the link to 
+                                            timezone file in dir zoneinfo
+                                                 (/etc/localtime)
+

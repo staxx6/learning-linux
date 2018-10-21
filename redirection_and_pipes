@@ -21,3 +21,6 @@ cut -d : -f 7 mypasswd | sort | uniq -c
 ## Example for error
 > egrep-v '^#' file | sort file     sort looks ONLY in stdin
 > egrep-v '^#' file | sort          better
+
+> cmd 2> dest   redirect error to
+> cmd 1> dest   redirect output to

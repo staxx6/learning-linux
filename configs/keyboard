@@ -1,0 +1,7 @@
+!D: all?
+-> /etc/default/keyboard    shouldn't be changed directly
+
+!D: Debian, Ubuntu
+> console-setup
+> dpkg-reconfigure keyboard-configuration
+

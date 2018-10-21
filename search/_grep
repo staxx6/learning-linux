@@ -1,19 +1,20 @@
-> egrep 'EXP' FILE      Gives all lines with EXP
-> egrep -i ...          ignores Uppercase
+> egrep 'EXP' FILE      Give all lines with EXP
+> egrep -i ...          ignore Uppercase
 > egrep -v ...          DON'T show lines with 'EXP'
-> egrep -n ...          shows line numbers
-> egrep -c ...          shows only matching line number
-> egrep -o ...          shows only matching part (separated lines)
+> egrep -n ...          show line numbers
+> egrep -c ...          show only matching line number
+> egrep -o ...          show only matching part (separated lines)
+> egrep -r ...          recursive
 
 > egrep -q ...          no output, only error prompts
 
-> egrep ... FILE1 FILE2 shows FILE1:MATCHES (new line) FILE2:MATCHES
+> egrep ... FILE1 FILE2 show FILE1:MATCHES (new line) FILE2:MATCHES
 > egrep ... -h "        dont show 'FILE1:' titles
-> egrep ... -H FILE     shows filename even by only one file
-> egrep ... -l FILE1 2  shows ONLY file names
+> egrep ... -H FILE     show filename even by only one file
+> egrep ... -l FILE1 2  show ONLY file names
 
-> egrep '^st ' FILE     shows only lines that starts with st and space ' '
-> egrep 'endthis$' FILE     shows only lines that ends with endthis
+> egrep '^st ' FILE     show only lines that starts with st and space ' '
+> egrep 'endthis$' FILE     show only lines that ends with endthis
 
 ?       The preceding item is optional and matched at most once.
 *       The preceding item will be matched zero or more times.

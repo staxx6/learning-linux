@@ -1,2 +1,3 @@
 > cp -r ORIGIN DEST
 > cp -a ORIGIN DEST     same but without changing the time 
+                        no need of -r ?

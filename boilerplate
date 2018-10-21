@@ -1,5 +1,6 @@
-!DISTRO:NO|YES      (standard)
+!D DISTRO:NO|YES      (standard)
 !SEE otherFile
+!?  untested/ unsure
 
 # TITLE
 
