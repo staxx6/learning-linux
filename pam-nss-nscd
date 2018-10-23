@@ -1,0 +1,17 @@
+!Not much to see here yet
+
+#### PAM
+Pluggable Authentication Modules - a lib for authentication functions...
+
+> ldd /usr/bin/passwd | grep libpam     ldd prints shared object dependencies
+                                            shows which cmd use PAM lib
+
+
+### NSS
+Name Service Switch - decide which sources will be used for User, Groups, Hosts.
+Normaly for login the files are located unter /etc/passwd [...] NSS manages
+this access to the files. 
+/etc/nsswitch.conf
+
+### NSCD
+Name Service Caching Daemon - Well, a cach for name requests

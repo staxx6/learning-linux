@@ -1,0 +1,92 @@
+> useradd -m USER   creates a new user with (-m) home folder
+> passwd USER       set user password
+
+> chage         "change age" sets how long a passowrd is valid
+> chgrp         change for a FILE the GRP
+> chmod         change access bits
+> chown         change for a FILE the USER owner
+> chsh          change standard shell for a user
+> addgroup      (Debian)
+> delgroup      (Debian) 
+> deluser       (Debian)
+> groupadd
+> groupdel
+> groupmod
+> groups        shows current groups for logged in user
+> id            shows current user and groups IDs
+> newgrp        change group for a user
+> newusers      creates new userS 
+> userdel
+> usermod
+> passwd NAME   change own passowrd or (as root) others pwd
+
+### Three types of users
+
+- SuperUser alias Sys-Admin alias root
+- Normal users
+- System user for daemons and server-services
+
+### passwd - User
+/etc/passwd -> Login:Password:UID:GID:Name:Home-dir:Shell
+                                |  |> Group ID
+                                |> User Identification
+
+# UID
+Root has always UID=0. Server-services and daemons mostly between 1 and 999.
+Normals users 1000 and ongoing.
+
+- User name should be only max 8 chars and only lowercase
+
+- /etc/skel standard configs for new home folders
+
+# Groups
+/etc/group
+Group-name:Password:GID:User-list
+
+In passwd is the primary group saved. Here to more
+GID=0 for root; 1 to 99 for system services; 100 for users;
+over 1000 for user created groups
+
+## Passwords
+-> /etc/shadow      Login:Password-Code:d1:d2:d3:d4:d5:d6:reserved
+d1 last change
+d2 when it's allowed to change
+d3 when it's needed to be changed
+d4 when user is warned for change
+d5 when it will be fully deactivated after inactive pw
+d6 since when acount deactivated
+
+chage -d 0 -M 100 -E 2018-12-31 loginname
+    user needs new pwd after login and a new one alle 100 days
+    after 31.12.2018 it's deactivated
+
+saved with SHA512 and salted so same PW aren't same hashed
+defined in ENCRYPT_METHOD var in /etc/login.defs
+
+### /etc/login.defs a lot of login/pwd stuff 
+
+### PAM-Extension for passowrd quality
+
+### makepassword if needing a lot of passowrds
+
+### failog
+Wrong logins /var/log/faillog (binary file) -configs->
+/etc/login.defs
+> faillog -u NAME           how many failed logins
+> faillog -u NAME -m MAX    how many failed logins are allowed (logins.def?)
+    > faillog -u name -r    restore user
+> faillig -m MAX            for all users; beware of Root!
+    > faillog -u root -m 0  
+
+### Forgot root password?
+Use a Live-System 
+> mkdir /rescue
+> mount -t auto /dev/xxx /rescue
+> chroot /rescue                    makes to root dir
+> passwd
+> CTRL+D
+> reboot
+
+-- To prevent: 
+- EFI/BIOS Deactivate all other bootable disks and set password
+- Encrypt disk

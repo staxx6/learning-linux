@@ -1,0 +1,7 @@
+> desmg     shows kernel message for modules
+> lsblk     show disks and mount point
+> lspci     shows PCI stuff
+> lsusb     shows usb
+
+### CPU
+/proc/cpuinfo

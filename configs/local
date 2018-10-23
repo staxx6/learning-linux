@@ -1,0 +1,13 @@
+systemd propsed config location /etc/locale.conf
+
+> localectl list-locales
+> localectl set-locales
+
+# Env vars
+glibc lib handles this vars
+
+LANG        standard for all not set LC-vars
+LC_TYPE     charset
+...
+
+> locale    gives current status

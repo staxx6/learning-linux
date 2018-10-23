@@ -1,3 +1,5 @@
+!see user-groups-pwd
+
 > ls -l     long listing
 
 drwxr-xr-x 2 staxx6 staxx6 4096 2. Okt 17:06 NAME
@@ -84,4 +86,4 @@ Setgid =            similar to suid but prog is started with group permissions
                     rwt or rwT: t if x is set too otherwise T (third col) (big T probaly means wrong sticky use)
                     > chmod +t FILE
 
-### Umask
+### Umask !see umask
