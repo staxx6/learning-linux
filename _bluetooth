@@ -1,0 +1,26 @@
+!Gnome:
+> gnome-bluetooth
+
+!KDE (not Manjaro?):
+bluedevill
+
+In background is bluetoothd and udev working
+/etc/bluetooth
+
+--> www.bluez.org
+
+> bluetoothctl      start config
+- list              list controller
+- devices           list all available devices
+
+Pair with a device
+- pariable
+- scan
+- scan off
+- agent on          cares for the authentication
+- pair xx:xx:xx     code
+- trust xx:xx:xx
+- connect xx:xx:xx
+- info xx:xx:xx
+
+/var/lib/bluetooth/id1/id2/info     config for one device

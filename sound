@@ -1,0 +1,12 @@
+Audio-System (ALSA - Advanced Linux Sound Architecture)
+alsa-modules start with name "snd"
+> lsmod | snd       returns all active modules
+                    lsmod = ls modules
+
+/proc/asound        access to some sound functions
+/etc/alsa/*         config alsa system
+/etc/asound.conf    "
+and .asoundrc
+
+--> alsa.project.org
+

@@ -1,0 +1,6 @@
+Need developer libs which are named like *-dev or *-devel
+
+> cd code
+> ./configure   checks for dependencies (not every program has this)
+> make
+> make install  for all users

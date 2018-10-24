@@ -5,3 +5,37 @@
 
 ### CPU
 /proc/cpuinfo
+> nproc     shows cpu cores count
+/sys/devices/system/cpu/cpuN/cpufreq/   status and control
+> cpufreq-set -r max 0.8GHz             set the max freq but not longer
+                                        work time isn't the best
+> sensors                               shows current temps
+
+### RAM
+> free      shows free ram ...
+
+### ACPI - Advanced Configuration and Power Interface
+> dmesg | grep -i acpi
+
+> powertop  shows power consumption and tunables which can be 
+            activated with 'enter' changes are till restart. Set settings
+            in /etc/rc.d/rc.local
+
+### Serial and parallel bus
+/dev/ttyS<n> and /dev/lp<n>
+
+### IDE SATA and SCSI
+communication over SCSI 
+> lsscsi
+/sys/bus/scsi/*
+/proc/scsi/*
+
+### USB
+storage medium managed like SCSI
+/dev/bus/usb
+/sys/bus/usb
+> lsusb -v      lists all USB-Bus interfaces and devices
+
+### PCI
+> lspci
+/proc/bus/pci and /sys/bus/pci/

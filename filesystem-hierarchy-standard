@@ -48,7 +48,8 @@
 
 /srv        On some Distros server files
 
-/sys        Contains the sysfs data system
+/sys        Type sysfs data system (not rly a dir)
+            Contains interfaces to kernel procedures
 
 /tmp        Contains tmp files but often in /var/tmp too
 

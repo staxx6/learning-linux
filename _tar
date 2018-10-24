@@ -1,0 +1,8 @@
+-x  extract
+-f  file, must be last argument!, read from file: 
+-z  gzip
+-j  bzip2
+-J  xz tar
+-v  verbose
+
+> tar xzf   name.tar.gz extract an gzip

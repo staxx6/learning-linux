@@ -1,0 +1,2 @@
+dynamic = programs use installed libs on disk
+static = libs are integrated in program

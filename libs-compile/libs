@@ -1,0 +1,17 @@
+### glibc
+Important and most used lib the "GNU C Library"
+
+###
+
+> ldd /bin/cp   shows all needed libs
+    *.so            shared lib
+    .a              static
+    .so.N           version
+
+/lib /lib64 /usr/lib
+
+### Runtime linker ld.so
+/etc/ld.so.cach     for faster lib search
+ldconfig            is started after restart
+                    should be always used if manualy packets
+                    are installed

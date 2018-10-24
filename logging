@@ -1,0 +1,31 @@
+/var/log
+
+# Syslog
+Most programs use a dedicated logging functions
+a popular one is rsyslogd
+!Manjaro: not used
+
+# Journal
+An alternative from systemd
+
+- backkground process: systemd-journald
+- file are saved in binary for safety reasons
+    saves space and time
+- every log is done in one file
+
+located in /var/log/journal or (not saved after restart!) /run/log/journal
+
+> journalctl        read the log
+> journalctl -b     prints only since last restart
+> journalctl -f     shows current incoming msg
+> journalctl -k     only kernel
+> journalctl -n     only N lines
+> journalctl -t     search for name (tags)
+> journalctl -u     only systemd-service
+
+> journalctl -b | grep systemd 
+
+/etc/systemd/journal.conf               configs
+/etc/systemd/journal.conf.d/*.conf
+/run/systemd/journal.conf.d/*.conf
+/usr/lib/systemd/journald.conf.d/*.conf
