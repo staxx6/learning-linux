@@ -1,0 +1,9 @@
+For scripts etc (sdaN changes)
+
+/dev/disk/by-id/NNN         ID from bussystem, device-name, model
+                            or serial number
+/dev/disk/by-label/label    name from filesystem
+/dev/disk/by-path/xxx       name by PCI-Interface, bus-system and
+                            partition number
+                            USB-Sticks on other Ports have different number!
+/dev/disk/by-uuid/nnn       UUID

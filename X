@@ -1,0 +1,37 @@
+> X -showconfig
+
+# Loging
+/var/log/Xorg.0.log
+**  Settings from config file
+++  Settings from shell
+==  X-Standard settings
+--  Settings from recognized devices
+!!  Hints
+II  Hints
+WW  Warning
+EE  Error
+
+> startx    to start desktop system without display manager (login)
+
+# Config
+/etc/X11/xorg.conf
+/etc/X11/xorg.conf.d/*.
+
+-- restart X
+
+> systemctl isolate multi-user
+> systemctl isolate graphical
+
+Syntax:
+    Section "name"
+        ....
+    EndSection
+
+Sections:
+    Monitor
+    Device          graphical config
+    Screen          resolution
+    files           File names (fonts)
+    Module
+    ServerFlags     
+    InputClass      Keyboard, Mouse, Touchpad

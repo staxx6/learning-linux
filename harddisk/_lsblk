@@ -1,4 +1,5 @@
-> lsblk     show disks and mount point
+> lsblk     (=block devices) show disks and mount point
+            
 
 ### Cross
 -> ntfsfix /dev/sdXX    fix ntfs read-only problem

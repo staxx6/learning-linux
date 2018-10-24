@@ -1,0 +1,51 @@
+# Compiz
+    Composition and window manager, with 3D support
+    Last used distro was Ubuntu with Unity
+
+# DRI and DRM
+    Direct Rendering Interface (DRI) enables the use of
+    3D-functions for X. DRI uses the kernel
+    Direct Renderer Manager (DRM) from Linux
+
+# EGL
+    Interface between OpenGL and window manager Wayland.
+    It enables for Wayland 3D-functions (OpenGL)
+    X uses GLX
+
+# GLX and libGL
+    X uses GLX for OpenGL calls - Interface between
+    X and OpenGL. 
+
+# KMS
+    Kernel Mode Settings, Linux kernel set the 
+    graphic mode not X. It can configure the screen
+    on start
+
+# Mesa and OpenGL
+    OpenGL ... Because of not open source Mesa was
+    created
+
+# OpenCL 
+    Open Computing Language
+
+# RandR
+    Resize and Rotate change this on running system
+
+### Driver stack
+- hardware drivers on kernel layer
+- Direct Rendering Manager - libdrm
+- 3D functions / OpenGL (mesa)
+- X-Drivers (xf86-video-xxx)
+
+### X or Wayland
+> ps ax | egrep -i "xorg|wayland"
+> loginctl show-session -p Type 2       not working
+
+!SEE X
+
+### What graphics card and drivers are in use
+> lspci -k | egrep -A3 'VGA|3D|Display'
+
+### Open GL
+> glxinfo   check 3D features
+> glxinfo | grep render

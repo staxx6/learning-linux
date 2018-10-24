@@ -1,0 +1,6 @@
+### collection of commands
+
+> lsblk                             (=block devices) show disks and mount point
+> umount partition
+> parted /dev/sdX mklabel LABEL
+> mkfs.ext4 /dev/sdXX               (=make-file-system)

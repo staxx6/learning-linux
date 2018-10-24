@@ -1,6 +1,23 @@
 > mount /dev/sdXX /mnt/
 > mount -t auto ...         type ext etc
 
+### mount on every start
+
+Get file system, UUID and UID from user
+
+> lsblk                 (=block devices) show disks and mount point
+> blkid                 get UUID
+> cat /etc/passwd       get UID (3th column)
+> mkidr /media/data     destination
+- edit /etc/fstab       (no new line for options!)
+    - UUID=1234 /media/data vfat uid=1000,gid=1000,fmask=0022,dmask=0022,flush,utf8,noexec,nofail 0 0
+            utf-8 for vfat!
+            noexec no one can start from this
+    - UUID=1234 /media/data ntfs uid=1000,gid=1000,fmask=0022,dmask=0022,flush,noexec,nofail 0 0
+            ntfs
+    - UUID=1234 /media/data ext4 noexec,nofail 0 0
+            ext4 no need for permissions (same as system)
+
 ### Cross
 # Target is busy
 -> fuse -m /dev/sdXX    shows pid

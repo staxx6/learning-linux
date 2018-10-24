@@ -1,7 +1,13 @@
 > desmg     shows kernel message for modules
 > lsblk     show disks and mount point
-> lspci     shows PCI stuff
+
+> lspci                                 shows PCI stuff
+> lspci -k | egrep -A3 'VGA|3D|Display' shows what graphic card and 
+                                        drivers are in use (-k kernel)
+                                        -A3 prints 3 Lines (+lines after match)
+
 > lsusb     shows usb
+
 
 ### CPU
 /proc/cpuinfo
