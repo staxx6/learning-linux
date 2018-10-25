@@ -1,0 +1,57 @@
+/etc/fstab       =filesystem-table
+
+Check current status
+> df -h         with readable sizes (manjaro has an alias)
+
+!see _mount
+> mount         check current mounted disks/ actives one
+> findmnt       same but better output
+
+### from start
+!see _mount 
+
+Get file system, UUID and UID from user
+
+> lsblk                 (=block devices) show disks and mount point
+> blkid                 get UUID
+> cat /etc/passwd       get UID (3th column)
+> mkidr /media/data     destination
+- edit /etc/fstab       (=filesystem-table) (no new line for options!)
+        1.           2.      3.     4.                                                            5.6.
+    - UUID=1234 /media/data vfat uid=1000,gid=1000,fmask=0022,dmask=0022,flush,utf8,noexec,nofail 0 0
+            utf-8 for vfat!
+            noexec no one can start from this
+    - UUID=1234 /media/data ntfs uid=1000,gid=1000,fmask=0022,dmask=0022,flush,noexec,nofail 0 0
+            ntfs
+    - UUID=1234 /media/data ext4 noexec,nofail 0 0
+            ext4 no need for permissions (same as system)
+
+3. type
+
+4. options
+- defaults
+- dev       tagging for characters or block devices
+- discard   SSD-Trim
+- exec      programs are startable 
+- noauto    dont mount on startup
+- nodev     ignoring tagging for characters or block devices
+- noexec    ~
+- nosuid    don't read Suid and Guid bits 
+- ro        read only
+- sw        swap
+- suid      read suid and guid
+- sync      no buffer (safer but slower)
+- owner     owner allowed to (un)mount
+- user      everyone can use (un)mount but last user can only
+            use umount
+- users     -user but without restriction
+
+5.
+for program "dump" (?) ignored
+system partition have 1 otherwise 0
+
+6. 
+Order
+system partition have 1 otherwise 0
+1 usually check for errors on startup
+2 check after the "1"

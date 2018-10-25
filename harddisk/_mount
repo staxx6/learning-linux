@@ -1,7 +1,13 @@
+> mount         check current mounted disks/ actives one
+> findmnt       same but better output
+
 > mount /dev/sdXX /mnt/
 > mount -t auto ...         type ext etc
 
+> mount -t iso9660 -o remount,exec      now you can start from disc programms
+
 ### mount on every start
+!see fstab
 
 Get file system, UUID and UID from user
 
@@ -9,7 +15,7 @@ Get file system, UUID and UID from user
 > blkid                 get UUID
 > cat /etc/passwd       get UID (3th column)
 > mkidr /media/data     destination
-- edit /etc/fstab       (no new line for options!)
+- edit /etc/fstab       (=filesystem-table) (no new line for options!)
     - UUID=1234 /media/data vfat uid=1000,gid=1000,fmask=0022,dmask=0022,flush,utf8,noexec,nofail 0 0
             utf-8 for vfat!
             noexec no one can start from this

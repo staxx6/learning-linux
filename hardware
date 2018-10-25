@@ -1,4 +1,4 @@
-> desmg     shows kernel message for modules
+> dmesg     (=display-message) shows kernel message for modules
 > lsblk     show disks and mount point
 
 > lspci                                 shows PCI stuff

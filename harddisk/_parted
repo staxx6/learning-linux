@@ -1,0 +1,35 @@
+--> gnu.org/software/parted
+!No MBR stuff here
+
+> parted /dev/sda   start parted for device
+- unit MiB, MG, GiB, GB, %
+- print
+
+- mklabel gpt   to create a partition table REMOVES-EVERYTHING
+- rm NUMBER     remove a partition from print number
+
+# create a second partition directly after one
+
+- unit MiB
+- print
+- mkpart NAME Start-MiB Size-GiB
+                |> +1 MiB from previous partition
+
+
+# Partition for swap, fat32, ntfs
+- mkpart NAME linux-swap 1MiB 10GiB     or fat32, ntfs
+
+# Flags
+- set PARTITION-NUMBER ATTR-NAME on/of
+    ATTR-NAMES: boot, lvm, raid and bios_grub
+- set 3 lvm on
+
+# EFI partition
+- mkpart part1 fat32 1MiB 100MiB
+- set 1 boot on
+- set 1 esp on      (=uEfi Extensible System Partition)
+
+# Rescue
+- rescue START-POINT SIZE   start needs to be neer old partition
+                            and only if nothing is damaged
+

@@ -1,0 +1,98 @@
+!See: _df_du
+> df -T     prints current fs
+
+# ext
+    Extended Filesystem
+
+# btrfs
+    Seen as future for Linux
+    Has: Device-Mapper, Snapshot and Raid functions
+    but still not stable..
+
+# xfs
+    for large disks >16 TiB
+
+# fat32 abd vfat
+    windows and USB-Sticks etc.
+
+# exfat
+    vfat improvement for bigger mediums
+
+# ntfs and ReFS
+    windows NT
+    ReFS on windows Server
+
+# hfs and hfsplus
+    Apple
+
+# apfs
+    new fs for Apple
+
+## CDs and DVDs
+
+# iso9660
+    CD-ROMs
+
+# udf
+    successor of iso9660
+    DVDs
+
+## Network
+
+# nfs
+    Network File System
+    Linux main fs for network fs
+
+# smbfs/cifs
+    enables Windows or Samba network directories
+
+# sshfs
+    over ssh
+
+# coda
+    like nfs with more features
+
+## Virtual (not physical = nodev)
+
+# devpts
+    via /dev/pts/* access to pseudo terminals
+
+# proc and sysfs
+    proc mapping of kernel/ process
+    adminstration
+    sysfs link between kernel and hardware
+    /proc   and     /sys
+
+# tmpfs
+    temporary fs /run/xxx
+
+# devtmpfs
+    /dev
+
+# cgroup
+    Control Groups
+
+## No Sorter
+
+# auto
+    not a fs, just for cmd which try to auto detect
+
+# autofs
+    kernel extension
+
+# cramfs and squashfs
+    Read-Only
+
+# fuse
+    Filesystem Userspace - outside kernel
+
+# gfs abd ocfs
+    Global Filesystem and Oracle FS
+    big connected fs
+
+# loop
+
+# none
+
+# unionfs/aufs/mhddfs/overlay
+    like c onion for fs

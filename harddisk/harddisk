@@ -1,0 +1,4 @@
+# sectors
+
+Old harddisks used 512 Byte sectors
+now 4096 Byte = 4 KiB

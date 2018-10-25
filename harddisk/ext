@@ -1,0 +1,39 @@
+# Journaling
+mount with 
+- data=ordered
+    only meta data are saved
+    ...
+- data=writeback
+    ...
+- data=journal
+    everything is saved > slow
+
+# Delayed Allocation
+    Like a buffer
+
+### standard without explicit options
+ext4:   ordered with Delayed Allocation
+dmesg | grep EXT (=display-message)
+
+# create
+mkfs.ext4 it decide itself about block size
+and inodes
+
+-i N     define how many bytes a iNode contains
+
+# tune2fs
+check regular the fs
+on fstab last number needs to be bigger than 0!
+> tune2fs /dev/sdb1 -c 30 -i 365    after 30 "mount" and/ or 365 days
+> tune2fs /dev/sdb1 -l
+
+# e2label
+
+# tune2fs -U
+    Own UUID
+
+# resize2fs
+...
+
+# e4defrag
+...
