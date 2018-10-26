@@ -1,0 +1,21 @@
+You can find all modules under /lib/modules/n.n
+
+> uname -r  shows current running kernel
+
+> cd /lib/modules/n.n
+> insmod kernel/...ko.xz    load a module
+> insmod -f kernel/...ko.xz    load a module even if not same version
+
+> modprobe MODULE   like insmode only better
+                        name, dependency, params
+
+> lsmod     shows current loaded modules
+
+> lspci -k  shows connected hardware and wich kernel module
+            should be used / is used
+
+> rmmod     removes module
+> modinfo   shows module info
+
+### DKMS
+....

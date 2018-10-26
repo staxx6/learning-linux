@@ -1,0 +1,55 @@
+!see: process>systemd
+
+The init system is the first process
+
+systemd is the shit
+
+
+### Procedure
+1. GRUB starts kernel
+2. Kernel starts systemd
+3. All unknown parameters (boot options) for the kernel are delivered to systemd
+4. Systemd reads confings from /lib/systemd abd /etc/systemd
+    starts network and graphic system
+5. Login; Some distros starts a new systemd for desktop processes
+
+> pstree    shows first process is systemd
+
+### What it init
+- sys vars
+- activate /proc and other tmp fs
+- time/date
+- keyboard
+- udev start
+- RAID/ LVM start
+- fs check
+- root partition (read only) with read-write remount
+- other fs check and bind other partitions
+- network
+
+### Adminstration
+Central CMD is systemctl 
+
+> systemctl                 lists all process which are systemd managed
+
+> systemctl start name      one time start
+> systemctl stop name       
+
+> systemctl status name
+> systemctl restart name
+> systemctl reload name     reload config
+
+> systemctl enable name     start every time in future
+> systemctl disable name    start 
+
+# Targets
+> systemctl get-default     currently target
+> systemctl list-units --type=target
+
+> systemctl isolate reboot.target   reboots
+
+default target
+> ln systemctl set-default multi-user.target
+
+# config
+/etc/systemd or /lib/systemd or /usr/lib/systemd

@@ -1,0 +1,65 @@
+GRUB = Grand Unifed Bootloader
+
+> os-prober     looks for OS
+
+The bootloader loads the kernel file from /boot/(vmlinuz)
+z for packed
+If the kernel is loaded it gives command to the init-system.
+
+# Parameter
+root=/dev/sda3  so kernel knows system partition
+
+# Initrd
+Kernel needs to access the system partition but can't do
+it if the modul is not loaded for the fs. Which are located
+in the fs... 
+Solution is the initrd file which is loaded on startup on
+the ram - /boot/initramfs file
+
+# Configs
+/etc/grub.d/ the scripts there are createing the real configs
+in /boot/grub2/grub.cfg
+
+> update-grub   starts all scripts in /etc/grub.d
+    00_header       Grub standard settings
+    05_debian_theme colors
+    10_linux        Menue entries
+    20_linux_xen    Menue entries for VMs
+    20_memtest86+   Menue entry for memtest (debian/ubuntu)
+    30_os-prober    Menue entries for all other OS
+    40_custom       Pattern for own cfgs
+    41_custom       creates in grub.cfg the text from custom.cfg
+
+/etc/default/grub   contains global settings
+    GRUB_DEFAULT                standard entry - saved, "menuentry"
+    GRUB_HIDDEN_TIMEOUT         only if one OS, time to show menu (it's black) "shift"
+    GRUB_HIDDEN_TIMEOUT_QUIET   =true   shows countdown
+    GRUB_DISTRUBUTOR            evaluateb by 10_linux script
+    GRUB_CMDLINE_LINUX          considered by 10_linux and gives kernel options - every start
+    GRUB_CMDLINE_LINUX_DEFAULT  considered by 10_linux and gives kernel options - not recovery
+    GRUB_GFXMODE                evaluated by 00_header
+    GRUB_DISABLE_LINUX_UUID     =true    if /dev/sda1 wanted
+    GRUB_DISABLE_RECOVERY       =true 
+
+# Shim
+It's for the UEFI Secure Soot. It is a small program but it's 
+signed and starts the GRUB
+
+# Startup
+In GRUB press E (edit) on one entry
+You can add kernel options on a line wich looks like:
+linux /boot/vmlinuz-n.n.n root=/dev/sdb13
+F10 to start with the options
+BUT this is not saved!
+
+# GRUB-CLI
+Start it with C
+- insmod ext2   load driver fpr fs (works for ext4 too)
+- set root='(hd1,13)'
+- linux /boot/vmlinuz-n.n.n root=/dev/sdb13 ro
+- initrd /boot/initrd-n.n.n
+- boot
+
+# Menue
+Change on /boot/grub2/grub.cfg don't touch this (its read only)
+
