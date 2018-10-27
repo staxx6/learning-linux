@@ -1,0 +1,83 @@
+!see _ip
+
+# if "ip link set enp4s0 up" not working
+# not right module 
+
+> lspci | grep -i net   get to know wich network hardware you have
+                        RTL810xE (lappy)
+
+                        look google for right module
+                        (here example for Intel G. 82540EP -> e1000)
+
+> modinfo e1000         info about module
+
+> lsmod | grep          is it running?
+
+> modprob e1000         if not
+
+> dmesg -c              Errors by startup?
+
+> ip link show          show list of interfaces
+> ip link set enpXsX up                     activate
+> ip addr add 192.168.0.2/24 dev enpXsX     add addr
+> ip addr show enpXsX
+> ping ..               test it
+
+# Nameserver (Gateway?)
+> cat /etc/resolv.conf
+
+> ip route add default via IP   set gateway
+> ip route                      show routing (example gateway)
+
+# Loopback
+> ip link set lo up
+> ip addr add 127.0.0.1 dev lo
+
+# remove the settings
+> ip addr add IP/24 dev enpX
+> ip addr del IP/24 dev enpX
+
+> ip addr flush dev enpXsX      completly deactivate
+
+# DHCP
+> ip link set enpXsX up
+
+> dhclient -v enpXsX    (v verbose)
+
+# IP 6
+> ip -6 addr add IP/64 dev enpXsX
+> ip -6 route add default via fe0::1 dev enpXsX
+> ping6 -n google.de / ping -6
+
+### WLAN
+> dmesg | egrep -i "wlan|wifi"  kernel stuff
+
+
+> iw dev wlp6s0 info    status
+> iw dev wlp6s0 link    status
+
+/proc/net/wireless  shows current quali
+
+> iw phy phy0 interface add wlp6s0 type managed
+> ip link set wlp6s0 up
+> iw dev wlp6s0 del
+
+# get connection
+> iw dev wlp6s0 scan            get SSIDs
+> iw dev wlp6s0 connect SSID    connect (no WPA)
+> dhclient wlp6s0
+> iw dev wlp6s0 disconnect
+
+# WPA
+/etc/wpa_supplicant.conf
+    network={
+        ssid="name"
+        psk=646546a4s66a54sd646546g5465w46e54654y6x54
+    }
+    network={
+        ssid="name"
+        psk="plain text"
+    }
+
+> wpa_passphrase wlan-name 'My Password'
+> wpa_supplicant -iwlp6s0 -Dnl80211,wext -c /etc/wpa_supplicant.conf    for connection (runns always)

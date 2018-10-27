@@ -1,3 +1,5 @@
+!see manual-startup
+
 > ip addr   shows all known network interfaces
             typical interfaces:
                 - ethN or enpNsM    Ethernet (Bus-Nr.)

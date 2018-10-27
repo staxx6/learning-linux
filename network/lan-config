@@ -1,0 +1,39 @@
+Host name: Uranus
+Local Network Domain: sol
+Other Hosts: jupiter, saturn, etc
+Local Addresses: 192.168.0.*
+Host ip: 192.168.0.2
+Gateway: 192.168.0.1
+
+/etc/hosts
+    all known ip-addr and their names
+    127.0.0.1 localhost     must be there
+    ::1 localhost   "
+    on static network config: 192.168.0.2 uranus.sol uranus
+
+/etc/host.conf
+    where to lookup unknown ip-addr
+    this example looks first on /etc/hosts (host) than /etc/resolv.conf (bind)
+    "multi on" allow multiply ips for host name
+        order host, bind
+        multi on
+
+Gateway
+    not rly standard config file
+    
+DNS /etc/resolv.conf
+
+Hostname
+> hostname                          prints current hostname /etc/hostname
+> hostnamectl set-hostname NAME
+
+NetworkManager
+> systemctl stop NetworkManager
+> systemctl disable NetworkManager
+    For own configs
+
+#### networkd (systemd)
+
+/etc/systemd/network
+    evaluation by process systemd-networkd
+    -> man systemd.network

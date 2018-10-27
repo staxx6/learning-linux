@@ -1,1 +1,4 @@
-> desmg     shows kernel message for modules
+> dmesg                     shows kernel message for modules
+> dmesg -c                  clear ring buffer?
+> dmesg --level=err,warn
+> dmesg -T                  Human readable timestamps
