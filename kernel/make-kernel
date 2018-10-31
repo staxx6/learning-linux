@@ -13,3 +13,4 @@ copy .configs if needed
 # new program for initram (old initramfs)
 > mkinitcpio -k KERNEL -g PATH      KERNEL=/lib/modules/KERNEL PATH=/root/NAME
 
+### initrd and kernel must have same name for grub!
