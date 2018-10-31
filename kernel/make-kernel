@@ -1,0 +1,15 @@
+download kernel 
+> cd /linux/
+
+copy .configs if needed
+> zcat /proc/config.gz > .config
+
+> make menuconfig
+
+> make -j4 bzImage modules
+
+> cp arch/x86_64/boot/bzImage /boot/kernel-new
+
+# new program for initram (old initramfs)
+> mkinitcpio -k KERNEL -g PATH      KERNEL=/lib/modules/KERNEL PATH=/root/NAME
+
