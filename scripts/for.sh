@@ -1,11 +1,10 @@
 #!/bin/bash
 
-addr=192.168.1
-file=hosts.out
+declare -i i=0
 
-> $file
-
-for i in $(seq 1 254);
+for file in *.out
 do
-    ping -c 1 -q -i 0.2 -w 1 $addr.$i >> $file ;
+    echo "$file"
+    i=$((i+1))
 done
+echo "$i"
