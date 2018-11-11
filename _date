@@ -1,0 +1,8 @@
+> date
+> date '+%Y-%m-%d'      start format with +
+> date -I               2018-11-11
+> date -Iminutes        2018-11-11T00:46+01:00
+> date -Iseconds        2018-11-11T00:46:55+01:00
+
+> cp /etc/passwd /tmp/passwd.$(date '+%Y-%m-%d_%H-%M-%S')
+    /tmp/passwd.2018-05-13_19-05-52
