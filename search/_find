@@ -1,5 +1,6 @@
 > find                                  looks for all files in current path
 > find -name '.e*'                      looks for files with starting ".e"
+> find -iname '.e*'                     ignore lower/uppercase
 > find PATHNAME -path '*/bla/*.pdf'     looks for files (end with .pdf and is in /bla/ dir) in PATHNAME
 > find /etc -type d                     shows only normal files
 > find /home -group users -mtime -5     files owned by users and touched last 5 days

@@ -1,0 +1,4 @@
+> read VAR      reads from input
+> read var1
+    - blaaaaa
+> echo $var1    prints blaaaaa

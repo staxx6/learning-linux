@@ -1,1 +1,3 @@
-# i dont get it
+#!/bin/bash
+
+# Input Field Separator 
