@@ -1,0 +1,38 @@
+!see network/_ssh
+
+/etc/ssh    config
+
+# connection over port 22
+
+#### safety (systemctl reload ssh)
+
+# passwords
+no empty passwords in /etc/shadow
+
+# root login
+sshd_config 
+    PermitRootLogin no
+
+systemctl reload ssh
+
+# no password login only keys
+sshd_config
+    PasswordAuthentication no   # TEST KEY LOGIN or get never again con.
+
+# disable ip6
+sshd_config
+    AddressFamily inet|inet6|any
+
+# port
+change it and tell it SELinux (Red-Hat, CentOS, Fedora)
+connect now with -p PORT
+- perhaps firewall problems! -
+
+# TCP-Wrapper
+for only one ip-pool
+/etc/hosts.allow
+/etc/hosts.deny
+
+# brute force
+# DenyHosts not supported anymore
+# Fail2Ban
