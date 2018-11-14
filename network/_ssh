@@ -14,5 +14,15 @@ configs /etc/ssh/ssh_config and /etc/ssh/sshd_config
         packets even if
     a firewall is between. -N for no shell
 
+
+# key
+> ssh-keygen
+    - dir (standard is okay)
+> ssh-copy-id -i user@server
+    - login should work now
+    - works only if you have a client with connection!
+      (use other pc with connection)
+
+
 ### Cross
 !SEE scp    copy files per ssh

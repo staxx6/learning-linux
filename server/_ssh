@@ -4,6 +4,11 @@
 
 # connection over port 22
 
+### start
+
+
+
+
 #### safety (systemctl reload ssh)
 
 # passwords
@@ -36,3 +41,22 @@ for only one ip-pool
 # brute force
 # DenyHosts not supported anymore
 # Fail2Ban
+
+-> /etc/fail2ban
+copy jail.conf to jail.local (will override conf)
+under [sshd] enter "enable = true"
+more (on top DEFAULT or enter unter sshd):
+    maxretry = 3
+
+> systemctl restart fail2ban
+> systemctl enable fail2ban
+
+> fail2ban-client status sshd
+
+# key
+!see network/ssh#key
+
+# disable password login
+sshd_config
+    PasswordAuthentication no
+    UsePam no
